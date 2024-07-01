@@ -16,12 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Getter
-public class Park {
-
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.UUID)
-  private UUID id;
+public class Park extends BaseModel{
   @ManyToOne
   private Resort resort;
 

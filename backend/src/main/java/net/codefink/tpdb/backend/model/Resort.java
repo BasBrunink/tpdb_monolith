@@ -14,12 +14,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Getter
-public class Resort {
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.UUID)
-  private UUID id;
+public class Resort extends BaseModel {
   private String name;
   @OneToMany(mappedBy = "resort")
   private List<Park> parks;
+  @OneToMany(mappedBy = "resort")
+  private List<Article> articles;
 }
