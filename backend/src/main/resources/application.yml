@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/tpdb-data
+    username: tpdb
+    password: tpdb_secret
+  application:
+    name: 'TPDB data-service'
+  jpa:
+    hibernate:
+      ddl-auto: update

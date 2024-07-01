@@ -1,0 +1,14 @@
+services:
+  postgres-data:
+    image: postgres:15
+    container_name: postgres-data
+    environment:
+      POSTGRES_USER: tpdb
+      POSTGRES_PASSWORD: tpdb_secret
+      POSTGRES_DB: tpdb-data
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
