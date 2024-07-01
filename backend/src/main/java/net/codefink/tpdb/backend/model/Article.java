@@ -1,10 +1,8 @@
 package net.codefink.tpdb.backend.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import net.codefink.tpdb.backend.model.attractions.Attraction;
 import net.codefink.tpdb.backend.model.types.ArticleType;
 import net.codefink.tpdb.backend.model.types.RideSystem;
 
@@ -16,18 +14,22 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 public class Article extends BaseModel {
   private ArticleType articleType;
   private String title;
   private String content;
-  private String author;
-  @ManyToOne
-  private Park park;
+  @OneToOne
+  private User author;
 
+
+  //Relations to subjects needs to be polymorphic
   @ManyToOne
-  private Resort resort;
-  @ManyToOne
-  private RideSystem rideSystem;
+  private BaseModel subject;
+
+
+
+
 
 
 

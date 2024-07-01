@@ -18,6 +18,5 @@ public class Resort extends BaseModel {
   private String name;
   @OneToMany(mappedBy = "resort")
   private List<Park> parks;
-  @OneToMany(mappedBy = "resort")
-  private List<Article> articles;
+
 }
