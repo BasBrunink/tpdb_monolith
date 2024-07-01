@@ -13,5 +13,6 @@ spring:
     enabled: true
     baseline-on-migrate: true
     validate-on-migrate: true
+#    please only use db/dummy for testing purposes
     locations:
-      classpath:db/migration,classpath:db/dummy
+      classpath:db/migration,classpath:db/seed,classpath:db/dummy
