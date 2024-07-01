@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import net.codefink.tpdb.backend.model.types.ArticleType;
+import net.codefink.tpdb.backend.model.types.RideSystem;
 
 
 import java.util.UUID;
@@ -25,6 +26,8 @@ public class Article extends BaseModel {
 
   @ManyToOne
   private Resort resort;
+  @ManyToOne
+  private RideSystem rideSystem;
 
 
 

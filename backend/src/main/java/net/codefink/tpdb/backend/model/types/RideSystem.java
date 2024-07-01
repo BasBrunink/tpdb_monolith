@@ -19,7 +19,7 @@ import java.util.List;
 public class RideSystem extends BaseModel {
   private String name;
   private String description;
-  @OneToMany(mappedBy = "parentId")
+  @OneToMany(mappedBy = "rideSystem")
   private List<Article> articles;
 }
 
