@@ -10,7 +10,8 @@ import net.codefink.tpdb.backend.model.Park;
 import java.util.UUID;
 
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Ride {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)

@@ -7,6 +7,7 @@ import net.codefink.tpdb.backend.model.ride.DarkRide;
 import net.codefink.tpdb.backend.model.ride.FlatRide;
 import net.codefink.tpdb.backend.model.ride.RollerCoaster;
 import net.codefink.tpdb.backend.model.types.ParkType;
+import net.codefink.tpdb.backend.model.types.RideSystem;
 
 import java.util.List;
 import java.util.UUID;
@@ -28,6 +29,8 @@ public class Park extends BaseModel{
   private List<FlatRide> flatRides;
   @OneToMany(mappedBy = "park")
   private List<RollerCoaster> RollerCoasters;
+  @OneToMany(mappedBy = "subject")
+  private List<Article> articles;
 
   private String name;
   private ParkType parkType;
