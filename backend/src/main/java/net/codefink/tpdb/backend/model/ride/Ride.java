@@ -35,15 +35,15 @@ public abstract class Ride extends BaseModel {
 
 
   //Technical Data
-  private String duration; //TODO needs Time Type for minutes
-  private String capacity;
+  private int duration; //TODO needs Time Type for minutes
+  private int capacity;
   private String restraint;
   private boolean hydraulicRestraint;
 
   //Safety restrictions
-  private String lengthUnAccompanied;
-  private String lengthAccompanied;
-  private String lengthProhibited;
+  private int lengthUnAccompanied;
+  private int lengthAccompanied;
+  private int lengthProhibited;
 
 
   //additional information
@@ -54,24 +54,8 @@ public abstract class Ride extends BaseModel {
   private String operatingPeriod;
   private boolean indoor;
   private boolean barrierFree;
-  private boolean virtualReality;
   private boolean surcharge;
   private String backPackHandling;
   private boolean babySwitch;
-
-  //Needs refactoring to subclasses
-
-  //Technical Data
-
-
-
-  //Train information
-  private  boolean bigBoySeats;
-  private String numberOfTrains;
-  private String numberOfCarsPerTrain;
-  private String numberOfRowsPerCar;
-  private String seatsPerRow;
-
-
 
 }

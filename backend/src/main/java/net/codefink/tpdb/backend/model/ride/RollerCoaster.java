@@ -15,18 +15,20 @@ import net.codefink.tpdb.backend.model.types.RideSystem;
 @Getter
 
 public class RollerCoaster extends Ride{
-  private String height;
-  private String length;
-  private String topSpeed;
-  private String acceleration;
-  private String topGForce;
-  private String inversions;
+  private int height;
+  private int length;
+  private int topSpeed;
+  private int acceleration;
+  private int topGForce;
+  private int inversions;
 
-  private  boolean bigBoySeats;
-  private String numberOfTrains;
-  private String numberOfCarsPerTrain;
-  private String numberOfRowsPerCar;
-  private String seatsPerRow;
+  private boolean virtualReality;
+  private boolean bigBoySeats;
+
+  private int numberOfTrains;
+  private int numberOfCarsPerTrain;
+  private int numberOfRowsPerCar;
+  private int seatsPerRow;
 
   @OneToOne
   private RideSystem rideSystem;

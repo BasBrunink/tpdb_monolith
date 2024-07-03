@@ -12,16 +12,17 @@ import net.codefink.tpdb.backend.model.types.RideSystem;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Getter
 public class DarkRide extends Ride{
-  private String height;
-  private String length;
-  private String topSpeed;
+  private int height;
+  private int length;
+  private int topSpeed;
 
   @OneToOne
   private RideSystem rideSystem; // needs enum
-
+  private int numberOfVehicles;
+  private int numberOfRowsPerVehicles;
+  private int seatsPerRow;
 
 
 }
