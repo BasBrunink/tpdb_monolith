@@ -1,6 +1,7 @@
 package net.codefink.tpdb.backend.model.ride;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,5 +14,5 @@ import net.codefink.tpdb.backend.model.types.RideType;
 @NoArgsConstructor
 @Getter
 public class FlatRide extends Ride {
-  private RideType rideType;
+  private String someThing;
 }

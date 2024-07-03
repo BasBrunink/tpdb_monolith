@@ -5,23 +5,26 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import net.codefink.tpdb.backend.model.BaseModel;
 import net.codefink.tpdb.backend.model.Park;
+import net.codefink.tpdb.backend.model.types.RideType;
 
 import java.util.UUID;
 
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Ride {
+public abstract class Ride extends BaseModel {
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
   private String name;
+  private String description;
   @ManyToOne
   private Park park;
   private String parkZone;
-  private String category;
-
+  @OneToOne
+  private RideType rideType;
   private String manufacturer;
   private String status;
   private String latitude;

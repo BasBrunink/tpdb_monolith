@@ -18,6 +18,8 @@ import java.util.List;
 @Getter
 public class RideSystem extends BaseModel {
   private String name;
+  @OneToOne
+  private RideType rideType;
   private String description;
   @OneToMany(mappedBy = "subject")
   private List<Article> articles;
