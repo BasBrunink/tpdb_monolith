@@ -19,8 +19,7 @@ public class ArticleService {
   //Create a new article
 
   public Optional<Article> createArticle(Article article) {
-    Article savedArticle = articleRepository.save(article);
-    return Optional.of(savedArticle);
+    return Optional.of(articleRepository.save(article));
   }
   //Read an article
   // Read by ID
