@@ -1,11 +1,8 @@
-package net.codefink.tpdb.backend.model.types;
+package net.codefink.tpdb.backend.model.types.ridetype;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import net.codefink.tpdb.backend.model.Article;
 import net.codefink.tpdb.backend.model.BaseModel;
 
@@ -16,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@Setter
 public class RideType extends BaseModel {
   private String name;
   private String description;

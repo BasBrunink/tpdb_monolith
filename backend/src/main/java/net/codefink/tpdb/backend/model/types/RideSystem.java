@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import net.codefink.tpdb.backend.model.Article;
 import net.codefink.tpdb.backend.model.BaseModel;
+import net.codefink.tpdb.backend.model.types.ridetype.RideType;
 
 import java.util.List;
 

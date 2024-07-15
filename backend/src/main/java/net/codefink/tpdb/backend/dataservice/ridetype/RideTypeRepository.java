@@ -1,6 +1,6 @@
 package net.codefink.tpdb.backend.dataservice.ridetype;
 
-import net.codefink.tpdb.backend.model.types.RideType;
+import net.codefink.tpdb.backend.model.types.ridetype.RideType;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

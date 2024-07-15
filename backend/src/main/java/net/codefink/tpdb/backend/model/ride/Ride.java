@@ -1,13 +1,9 @@
 package net.codefink.tpdb.backend.model.ride;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import net.codefink.tpdb.backend.model.BaseModel;
 import net.codefink.tpdb.backend.model.Park;
-import net.codefink.tpdb.backend.model.types.RideType;
+import net.codefink.tpdb.backend.model.types.ridetype.RideType;
 
 import java.util.UUID;
 

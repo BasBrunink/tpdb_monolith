@@ -1,6 +1,7 @@
 package net.codefink.tpdb.backend.dataservice.ridetype;
 
-import net.codefink.tpdb.backend.model.types.RideType;
+import net.codefink.tpdb.backend.model.types.ridetype.RideType;
+import net.codefink.tpdb.backend.model.types.ridetype.UpdateRideTypeDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,8 +13,10 @@ public class RideTypeService {
 
   private final RideTypeRepository rideTypeRepository;
 
+
   public RideTypeService(RideTypeRepository rideTypeRepository) {
     this.rideTypeRepository = rideTypeRepository;
+
   }
 
   //Create a new ride type
@@ -28,24 +31,22 @@ public class RideTypeService {
   }
 
   //Read all
-  public List<RideType> getRideType() {
+  public List<RideType> getAllRideTypes() {
     return rideTypeRepository.findAll();
   }
 
   //Update a ride type
-  public Optional<RideType> updateRideType(UUID id, RideType rideType) {
-    Optional<RideType> rideTypeOptional = rideTypeRepository.findById(id);
-    if (rideTypeOptional.isPresent()) {
-      RideType rideTypeToUpdate = rideTypeOptional.get();
-      //set the ride type attributes
-      return Optional.of(rideTypeRepository.save(rideTypeToUpdate));
-    } else {
-      return Optional.of(rideTypeRepository.save(rideType));
-    }
+  public Optional<RideType> updateRideType(UUID id, UpdateRideTypeDto dto) {
+    Optional<RideType> toUpdate = rideTypeRepository.findById(id);
+    return Optional.of(rideTypeRepository.save(RideType.builder().name(dto.getName()).category(dto.getCategory()).description(dto.getDescription()).build()));
+
+
   }
 
   //Delete a ride type
   public void deleteRideType(UUID id) {
     rideTypeRepository.deleteById(id);
   }
+
+
 }
