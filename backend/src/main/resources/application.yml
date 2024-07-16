@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/tpdb-data
+    url: jdbc:postgresql://localhost:5432/data
     username: tpdb
-    password: tpdb_secret
+    password: secret
   application:
     name: 'TPDB data-service'
   jpa:

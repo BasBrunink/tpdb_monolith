@@ -1,15 +1,4 @@
 services:
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - "1025:1025"
-      - "8025:8025"
-    restart: 'unless-stopped'
-    healthcheck:
-      test: echo | telnet 127.0.0.1 1025
-    mem_limit: 2g
-    mem_swappiness: 0
-    cpus: 0.5
   postgres:
     image: postgres:15-alpine
     container_name: postgres
